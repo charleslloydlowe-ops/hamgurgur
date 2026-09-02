@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Sussy Space — Browser Multiplayer</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div id="app">
+  <section id="menu" class="screen">
+    <div class="logo">SUSSY<br><span>SPACE</span></div>
+    <p class="sub">A totally original suspicious spaceship game 👀</p>
+    <input id="name" maxlength="16" placeholder="Your name" autocomplete="nickname">
+    <div class="row">
+      <button id="create">CREATE ROOM</button>
+      <button id="join">JOIN ROOM</button>
+    </div>
+    <input id="roomCode" maxlength="5" placeholder="ROOM CODE" style="text-transform:uppercase">
+    <p id="status" class="status"></p>
+    <div class="features">🌎 Cross-platform browser play · 📱 Touch controls · 🕵️ Hidden roles · 💀 Meetings</div>
+  </section>
+
+  <section id="lobby" class="screen hidden">
+    <h1>ROOM <span id="code"></span></h1>
+    <p>Share the code with your suspicious friends.</p>
+    <div id="players" class="players"></div>
+    <button id="start">START GAME</button>
+    <button id="leave" class="secondary">LEAVE</button>
+    <p id="lobbyStatus"></p>
+  </section>
+
+  <section id="game" class="screen hidden">
+    <div id="hud">
+      <b id="role">UNKNOWN</b>
+      <span id="taskbar">Tasks: 0 / 3</span>
+      <button id="meetingBtn">🚨 MEETING</button>
+    </div>
+    <canvas id="canvas"></canvas>
+    <div id="touch" class="touch">
+      <button data-key="up">▲</button>
+      <div><button data-key="left">◀</button><button data-key="down">▼</button><button data-key="right">▶</button></div>
+    </div>
+    <div id="actions">
+      <button id="useBtn">TASK</button>
+      <button id="killBtn" class="danger hidden">KILL</button>
+      <button id="reportBtn" class="danger">REPORT</button>
+    </div>
+  </section>
+
+  <div id="meetingModal" class="modal hidden">
+    <div class="card">
+      <h2>🚨 EMERGENCY MEETING</h2>
+      <p id="meetingText">WHO IS SUS?</p>
+      <div id="voteList"></div>
+      <button id="skipVote">SKIP VOTE</button>
+    </div>
+  </div>
+
+  <div id="gameOver" class="modal hidden">
+    <div class="card">
+      <h1 id="winner"></h1>
+      <p id="imps"></p>
+      <button onclick="location.reload()">PLAY AGAIN</button>
+    </div>
+  </div>
+</div>
+<script src="/game.js"></script>
+</body>
+</html>
