@@ -1,10 +1,4 @@
-# Sussy Space — Cloudflare Multiplayer
-
-A cross-platform browser multiplayer social-deduction game inspired by the general genre of spaceship impostor games.
-
-## Features
-- Browser-based: PC, Mac, Chromebook, iOS, Android and tablets
-- Touch + keyboard controls
+poo
 - Room codes
 - Up to 12 players per room
 - Hidden impostor role
